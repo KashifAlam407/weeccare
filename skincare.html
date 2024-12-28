@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkinCare</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-color: beige;
+        }
+
+        /* main {
+            width: 96%;
+            justify-content: center;
+            align-items: center;
+        } */
+
+        .navBar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            background-color: white;
+        }
+
+        header {
+            position: sticky;
+            top: 0px;
+            z-index: 10;
+        }
+
+
+        .logo {
+            color: black;
+            font-size: 45px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bolder;
+        }
+
+        .navLinks {
+            margin-top: 20px;
+        }
+
+        .navLinks a {
+            padding-left: 20px;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .login {
+            margin-top: 20px;
+        }
+
+        .login a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: rgb(231, 59, 88);
+            text-decoration: underline;
+        }
+
+        .login span {
+            margin-left: 10px;
+            font-size: 20px;
+
+        }
+
+        .heading {
+            font-size: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: -80px;
+
+        }
+
+        .Skincart {
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+            justify-content: space-between;
+        }
+
+        .Skincart img {
+            height: 400px;
+            width: 300px;
+            box-shadow: 5px 10px 15px rgb(227, 88, 248);
+            border-radius: 30px;
+        }
+
+        img {
+            box-shadow: 3px 3px rgb(239, 88, 88);
+        }
+
+        footer {
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            background-color: rgb(35, 34, 34);
+            color: white;
+            padding: 10px;
+            padding-top: 20px;
+            width: 100vw;
+            padding: 40px;
+            margin-top: 80px;
+        }
+
+        footer span {
+            display: block;
+        }
+
+        .item {
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .itemName {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        button {
+            margin-left: 3px;
+            border-radius: 6px;
+        }
+
+        .addToCart {
+            color: white;
+            background-color: black;
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+
+        }
+
+        .byNow {
+            background-color: red;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+
+
+        }
+
+        .addToCart:hover {
+            background-color: rgb(59, 58, 58);
+            cursor: pointer;
+
+        }
+
+        .byNow:hover {
+            background-color: rgb(245, 93, 119);
+            cursor: pointer;
+        }
+
+
+        .item:hover {
+            transform: scale(1.1);
+
+        }
+
+        .item {
+            transition: transform 0.9s;
+        }
+
+
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .cart-item button {
+            padding: 5px 10px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .cart-item span {
+            width: 30px;
+            text-align: center;
+        }
+
+        .total {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        #cart-container {
+            margin: 3px;
+            width: 400px;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: white;
+            margin-left: 1100px;
+            z-index: 10;
+
+        }
+
+        #cart-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #cart-container button {
+            margin: 0px 20px 10px 250px;
+            padding: 6px;
+            background-color: rgb(132, 128, 41);
+            font-size: 20px;
+
+        }
+    </style>
+</head>
+
+<body id="skincare" style="background-color: beige;">
+    <main>
+        <header>
+            <nav class="navBar">
+                <div>
+                    <div class="logo">
+                        WeCare
+                    </div>
+                    <div class="logoDesc">
+                        Because Your Wellness Matter
+                    </div>
+                </div>
+                <div class="navLinks">
+                    <a href="index.html">Home</a>
+
+
+
+                    <a href="skincare.html"> Skin Care</a>
+                    <a href="Haircare.html"> Hair Care</a>
+                    <a href="Menstrual.html"> Menstrual Care</a>
+                    <a href="kits.html">Kits</a>
+
+
+
+
+                    <a href="about.html">About</a>
+                    <a href="contactUs.html">Contact Us</a>
+                </div>
+                <div class="login">
+                    <span><a href="login.html">LogIn</a></span>
+                    <span><a href="signup.html">SignUp</a></span>
+                    <span>
+                        <span class="bi bi-person"></span>
+                        <span class="bi bi-cart"></span>
+                    </span>
+                </div>
+            </nav>
+
+            <!-- Cart Section -->
+            <div id="cart-container">
+                <h2>&nbsp; Your Cart:</h2>
+                <ul id="cart-list"></ul>
+                <div id="cart-total"></div>
+                <a href="address.html"><button>Checkout</button></a>
+
+            </div>
+        </header>
+        <h1 class="heading">Skin Care</h1>
+        <div class="Skincart">
+
+            <div style="margin-bottom: 40px;" class="item">
+                <img src="publik/images/IMG-20241227-WA0020.jpg" alt="" height="400px" width="300px">
+                <div class="item2">
+                    <div class="itemName">WeCare FaceScrub</div>
+                    <span>Price: &#8377; 189</span>
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity: <button class="decrement">-</button> 1<button
+                            class="increment">+</button></span>
+                    <div><button class="addToCart">Add To Cart</button>
+                        <button class="byNow">BuyNow</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="publik/images/IMG-20241227-WA0017.jpg" alt="" height="400px" width="300px">
+                <div class="item2">
+                    <div class="itemName">WeCare Face Serum</div>
+                    <span>Price: &#8377; <span id="item-price">299</span></span>
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity: <button class="decrement"
+                            onclick="decrement()">-</button><span id="item-quantity"> 1</span><button class="increment"
+                            onclick="increment()">+</button></span>
+
+                    <!-- Total Price Section -->
+                    <div class="total">
+                        Total Price: <span id="total-price">299</span>
+                    </div>
+                    <div><button class="addToCart" onclick="addToCart()">Add To Cart</button>
+                        <button class="byNow" onclick="byNow()">BuyNow</button>
+                    </div>
+
+
+                </div>
+            </div>
+            <div style="margin-bottom: 40px;" class="item">
+                <img src="publik/images/IMG-20241227-WA0018.jpg" alt="" height="400px" width="300px">
+                <div class="item2">
+                    <div class="itemName">WeCare Sunscreen</div>
+                    <span>Price: &#8377; 299</span>
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity: <button class="decrement">-</button> 1<button
+                            class="increment">+</button></span>
+                    <div><button class="addToCart">Add To Cart</button>
+                        <button class="byNow">BuyNow</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="publik/images/IMG-20241227-WA0029.jpg" alt="" height="400px" width="300px">
+                <div class="item2">
+                    <div class="itemName">WeCare Vitamin-E Tablets</div>
+                    <span>Price: &#8377; 199</span>
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity: <button class="decrement">-</button> 1<button
+                            class="increment">+</button></span>
+                    <div><button class="addToCart">Add To Cart</button>
+                        <button class="byNow">BuyNow</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="publik/images/WhatsApp Image 2024-12-27 at 21.37.10_0b1e87c5.jpg" alt="" height="400px"
+                    width="300px">
+                <div class="item2">
+                    <div class="itemName">WeCare FaceWash</div>
+                    <span>Price: &#8377; 199</span>
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity: <button class="decrement">-</button> 1<button
+                            class="increment">+</button></span>
+                    <div><button class="addToCart">Add To Cart</button>
+                        <button class="byNow">BuyNow</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="publik/images/IMG-20241227-WA0015.jpg" alt="" height="400px" width="300px">
+                <div class="item2">
+                    <div class="itemName">WeCare Apple CiderVinegar</div>
+                    <span>Price: &#8377; 399</span>
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity: <button class="decrement">-</button> 1<button
+                            class="increment">+</button></span>
+                    <div><button class="addToCart">Add To Cart</button>
+                        <button class="byNow">BuyNow</button>
+                    </div>
+                </div>
+
+            </div>
+            <div style="margin-top: 40px;" class="item">
+                <img src="publik/images/IMG-20241227-WA0022.jpg" alt="" height="400px" width="300px">
+                <div class="item2">
+                    <div class="itemName">WeCare Collagen Booster</div>
+                    <span>Price: &#8377; 599</span>
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity: <button class="decrement">-</button> 1<button
+                            class="increment">+</button></span>
+                    <div><button class="addToCart">Add To Cart</button>
+                        <button class="byNow">BuyNow</button>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 40px;" class="item">
+                <img src="publik/images/IMG-20241227-WA0024.jpg" alt="" height="400px" width="300px">
+                <div class="item2">
+                    <div class="itemName">WeCare Glutathione</div>
+                    <span>Price: &#8377; 549</span>
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity: <button class="decrement">-</button> 1<button
+                            class="increment">+</button></span>
+                    <div><button class="addToCart">Add To Cart</button>
+                        <button class="byNow">BuyNow</button>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 40px;" class="item">
+                <img src="publik/images/IMG-20241227-WA0030.jpg" alt="" height="400px" width="300px">
+                <div class="item2">
+                    <div class="itemName">WeCare Plant Based Protein</div>
+                    <span>Price: &#8377; 899</span>
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity: <button class="decrement">-</button> 1<button
+                            class="increment">+</button></span>
+                    <div><button class="addToCart">Add To Cart</button>
+                        <button class="byNow">BuyNow</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <footer>
+            <div>
+                <span style="font-size: 30px;">WeCare.</span>
+                <br>
+                <span>Who are we?</span>
+                <span>Carrers</span>
+                <span>Authenticity</span>
+
+            </div>
+            <div>
+                <span style="font-size: 30px;">Help</span>
+                <br>
+
+                <span>Contact Us</span>
+                <span>Frequently asked question</span>
+                <span>Shipping and delivery</span>
+
+            </div>
+            <div>
+                <span style="font-size: 30px;">Quick links</span>
+                <br>
+
+                <span>Offer zone</span>
+                <span>New Launches</span>
+                <span>Sitemap</span>
+
+            </div>
+            <div>
+                <span style="font-size: 30px;">Top Categories</span>
+                <br>
+
+                <span>Hair Care</span>
+                <span>Mental Wellness</span>
+                <span>Menstrual Care</span>
+            </div>
+
+        </footer>
+
+    </main>
+    <!-- <script src="src/app.js"></script> -->
+    <script>
+        const itemPrice = 299;  // Price per item
+        let quantity = 1;         // Initial quantity
+        let cart = [];            // Array to store cart items
+
+        // Update the displayed quantity and total price
+        function updateCart() {
+            document.getElementById('item-quantity').textContent = quantity;
+            document.getElementById('total-price').textContent = (itemPrice * quantity).toFixed(2);
+        }
+
+        // Increment quantity
+        function increment() {
+            quantity++;
+            updateCart();
+        }
+
+        // Decrement quantity (cannot go below 1)
+        function decrement() {
+            if (quantity > 1) {
+                quantity--;
+                updateCart();
+            }
+        }
+
+        // Add the current item to the cart
+        function addToCart() {
+            const cartItem = {
+                name: "Product 1",
+                price: itemPrice,
+                quantity: quantity,
+                total: (itemPrice * quantity).toFixed(2)
+            };
+
+            cart.push(cartItem);
+            updateCartList();
+            alert(`${cartItem.name} has been added to your cart!`);
+        }
+
+        // Display cart items in the cart list
+        function updateCartList() {
+            const cartList = document.getElementById('cart-list');
+            const cartTotal = document.getElementById('cart-total');
+            cartList.innerHTML = ''; // Clear previous cart items
+
+            let totalPrice = 0;
+
+            cart.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.name} - Quantity: ${item.quantity} - Price: $${item.total}`;
+                cartList.appendChild(listItem);
+                totalPrice += parseFloat(item.total);
+            });
+
+            cartTotal.textContent = `Total Cart Price: $${totalPrice.toFixed(2)}`;
+        }
+
+        // Simulate the "Buy Now" action
+        function buyNow() {
+            if (cart.length === 0) {
+                alert('Your cart is empty!');
+            } else {
+                alert('Proceeding to checkout...');
+                cart = [];  // Clear the cart after purchase
+                updateCartList();  // Update the cart display
+            }
+        }
+    </script>
+</body>
+
+</html>

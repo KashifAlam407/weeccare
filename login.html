@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <title>Login Form</title>
+    <style>
+        body {
+            background-color: beige;
+        }
+        header{
+            position: sticky;
+            top: 0px;
+            z-index: 10;
+        }
+
+        /* main {
+            width: 96%;
+            justify-content: center;
+            align-items: center;
+        } */
+
+        .navBar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            background-color: white;
+        }
+
+        .logo {
+            color: black;
+            font-size: 45px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bolder;
+        }
+
+        .logoDesc {
+            color: black;
+        }
+
+        .navLinks {
+            margin-top: 20px;
+        }
+
+        .navLinks a {
+            padding-left: 20px;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .login {
+            margin-top: 20px;
+        }
+
+        .login a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: rgb(231, 59, 88);
+            text-decoration: underline;
+        }
+
+        .login span {
+            margin-left: 10px;
+            font-size: 20px;
+
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            margin-top: 8px;
+            background-color: white;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .container h2 {
+            text-align: center;
+            color: #040404;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #e3384c;
+            color: rgb(3, 0, 0);
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #e17a88;
+        }
+
+        .form-group .forgot-password {
+            text-align: right;
+            font-size: 14px;
+            color: #f06979;
+        }
+
+        .form-group .forgot-password a {
+            color: #b50707;
+            text-decoration: none;
+        }
+
+        footer {
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            background-color: rgb(35, 34, 34);
+            color: white;
+            padding: 10px;
+            padding: 40px;
+            margin-top: 80px;
+        }
+
+        footer span {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <nav class="navBar">
+                <div>
+                    <div class="logo">
+                        WeCare
+                    </div>
+                    <div class="logoDesc">
+                        Because Your Wellness Matter
+                    </div>
+                </div>
+                <div class="navLinks">
+                    <a href="index.html">Home</a>
+
+
+
+                    <a href="skincare.html"> Skin Care</a>
+                    <a href="Haircare.html"> Hair Care</a>
+                    <a href="Menstrual.html"> Menstrual Care</a>
+                    <a href="kits.html">Kits</a>
+
+
+
+
+                    <a href="about.html">About</a>
+                    <a href="contactUs.html">Contact Us</a>
+                </div>
+                <div class="login">
+                    <span><a href="login.html">LogIn</a></span>
+                    <span><a href="signup.html">SignUp</a></span>
+                    <span>
+                        <span class="bi bi-person"></span>
+                        <span class="bi bi-cart"></span>
+                    </span>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
+            <h2>Login</h2>
+            <form action="login_processing.php" method="post">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Login">
+                </div>
+
+                <div class="form-group">
+                    <p class="forgot-password"><a href="#">Forgot password?</a></p>
+                </div>
+            </form>
+        </div>
+        <footer>
+            <div>
+                <span style="font-size: 30px;">WeCare.</span>
+                <br>
+
+                <span>Who are we?</span>
+                <span>Carrers</span>
+                <span>Authenticity</span>
+
+            </div>
+            <div>
+                <span style="font-size: 30px;">Help</span>
+                <br>
+
+                <span>Contact Us</span>
+                <span>Frequently asked question</span>
+                <span>Shipping and delivery</span>
+
+            </div>
+            <div>
+                <span style="font-size: 30px;">Quick links</span>
+                <br>
+
+                <span>Offer zone</span>
+                <span>New Launches</span>
+                <span>Sitemap</span>
+
+            </div>
+            <div>
+                <span style="font-size: 30px;">Top Categories</span>
+                <br>
+
+                <span>Hair Care</span>
+                <span>Mental Wellness</span>
+                <span>Menstrual Care</span>
+            </div>
+
+        </footer>
+    </main>
+</body>
+
+</html>

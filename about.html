@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-color: beige;
+        }
+        header{
+            position: sticky;
+            top: 0px;
+            z-index: 10;
+        }
+        /* main {
+            width: 96%;
+            justify-content: center;
+            align-items: center;
+        } */
+
+        .navBar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            background-color: white;
+        }
+
+        .logo {
+            color: black;
+            font-size: 45px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bolder;
+        }
+
+        .navLinks {
+            margin-top: 20px;
+        }
+
+        .navLinks a {
+            padding-left: 20px;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .login {
+            margin-top: 20px;
+        }
+
+        .login a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: rgb(231, 59, 88);
+            text-decoration: underline;
+        }
+
+        .login span {
+            margin-left: 10px;
+            font-size: 20px;
+
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+
+        .intro {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+            margin: 30px;
+
+        }
+
+        .n {
+            color: rgb(168, 10, 168);
+        }
+
+        footer {
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            background-color: rgb(35, 34, 34);
+            color: white;
+            padding: 40px;
+            margin-top: 80px;
+        }
+
+        footer span {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <nav class="navBar">
+                <div>
+                    <div class="logo">
+                        WeCare
+                    </div>
+                    <div class="logoDesc">
+                        Because Your Wellness Matter
+                    </div>
+                </div>
+                <div class="navLinks">
+                    <a href="index.html">Home</a>
+
+
+
+                    <a href="skincare.html"> Skin Care</a>
+                    <a href="Haircare.html"> Hair Care</a>
+                    <a href="Menstrual.html"> Menstrual Care</a>
+                    <a href="kits.html">Kits</a>
+
+
+
+
+                    <a href="about.html">About</a>
+                    <a href="contactUs.html">Contact Us</a>
+                </div>
+                <div class="login">
+                    <span><a href="login.html">LogIn</a></span>
+                    <span><a href="signup.html">SignUp</a></span>
+                    <span>
+                        <span class="bi bi-person"></span>
+                        <span class="bi bi-cart"></span>
+                    </span>
+                </div>
+            </nav>
+        </header>
+        <div class="intro">
+            <h1>ABOUT US</h1>
+            <p>At <span class="n">WeCare</span> , we believe that every woman deserves to feel empowered, confident, and
+                cared for. Our mission is to provide high-quality, effective wellness products designed to support women
+                in
+                all aspects of their lives. From menstrual care to sexual wellness and skincare, WECARE offers a range
+                of
+                thoughtfully crafted products that promote well-being.</p>
+
+            <p>Our goal is to foster a space where women can prioritize their health and embrace themselves with
+                confidence
+                and care.</p>
+
+            <p>At <span class="n">WeCare</span>, your wellness is our priority. We are here to support, nurture, and
+                care
+                for you—because your wellness matter .</p>
+        </div>
+        <footer>
+            <div>
+                <span style="font-size: 30px;">WeCare.</span>
+                <br>
+
+                <span>Who are we?</span>
+                <span>Carrers</span>
+                <span>Authenticity</span>
+
+            </div>
+            <div>
+                <span style="font-size: 30px;">Help</span>
+                <br>
+
+                <span>Contact Us</span>
+                <span>Frequently asked question</span>
+                <span>Shipping and delivery</span>
+
+            </div>
+            <div>
+                <span style="font-size: 30px;">Quick links</span>
+                <br>
+
+                <span>Offer zone</span>
+                <span>New Launches</span>
+                <span>Sitemap</span>
+
+            </div>
+            <div>
+                <span style="font-size: 30px;">Top Categories</span>
+                <br>
+
+                <span>Hair Care</span>
+                <span>Mental Wellness</span>
+                <span>Menstrual Care</span>
+            </div>
+
+        </footer>
+    </main>
+</body>
+
+</html>
